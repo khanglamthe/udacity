@@ -18,3 +18,21 @@
 [2022-12-26 08:58:06,012] INFO in app: prediction: 
 [20.35373177134412]
 127.0.0.1 - - [26/Dec/2022 08:58:06] "POST /predict HTTP/1.1" 200 -
+
+NAME                                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/khanglt-udacity-http-service   ClusterIP   10.97.134.109   <none>        80/TCP    4h40m
+service/kubernetes                     ClusterIP   10.96.0.1       <none>        443/TCP   5h48m
+
+NAME                                       READY   STATUS    RESTARTS   AGE
+pod/khanglt-udacity-app-659dc586ff-6rj7w   1/1     Running   0          4h40m
+Error from server (AlreadyExists): services "khanglt-udacity-http-service" already exists
+Forwarding from 127.0.0.1:8089 -> 80
+Forwarding from [::1]:8089 -> 80
+Handling connection for 8089
+
+Port: 8089
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
